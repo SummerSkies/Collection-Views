@@ -24,10 +24,10 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Item" id="ss9-su-pJp">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Item" id="ss9-su-pJp" customClass="EmojiCollectionViewCell" customModule="EmojiDictionary" customModuleProvider="target">
                                 <rect key="frame" x="7" y="0.0" width="400" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Zf-EC-1sF" customClass="EmojiCollectionViewCell" customModule="EmojiDictionary" customModuleProvider="target">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Zf-EC-1sF">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -66,15 +66,13 @@
                                         <constraint firstItem="LNQ-ZB-Jg7" firstAttribute="top" secondItem="8Zf-EC-1sF" secondAttribute="top" constant="11" id="QS6-jJ-6ad"/>
                                         <constraint firstAttribute="trailing" secondItem="LNQ-ZB-Jg7" secondAttribute="trailing" constant="20" id="mTj-7u-q8J"/>
                                     </constraints>
-                                    <connections>
-                                        <outlet property="descriptionLabel" destination="bGV-1Y-Ujh" id="i6E-9Q-2OY"/>
-                                        <outlet property="nameLabel" destination="ulE-ed-EDq" id="b8c-Cy-Fgu"/>
-                                        <outlet property="symbolLabel" destination="KHA-f1-1nc" id="8EE-Iv-sp4"/>
-                                    </connections>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="400" height="70"/>
                                 <connections>
-                                    <segue destination="yk9-JV-ugU" kind="presentation" id="PPS-Ce-4aS"/>
+                                    <outlet property="descriptionLabel" destination="bGV-1Y-Ujh" id="tTl-Vt-6bS"/>
+                                    <outlet property="nameLabel" destination="ulE-ed-EDq" id="aWP-Sy-kWF"/>
+                                    <outlet property="symbolLabel" destination="KHA-f1-1nc" id="DQl-r2-wES"/>
+                                    <segue destination="pI4-Te-ok3" kind="presentation" id="eex-US-2zT"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -268,7 +266,7 @@
             <objects>
                 <navigationController id="yk9-JV-ugU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9b1-9E-j5S">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -280,6 +278,9 @@
             <point key="canvasLocation" x="-701" y="151"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eex-US-2zT"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
